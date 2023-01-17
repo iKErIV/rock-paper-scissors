@@ -32,6 +32,14 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-const playerSelection = "rock";
 const computerSelection = getComputerChoice(choices);
-console.log(playRound(playerSelection, computerSelection));
+
+// Function that call playRound function 5 times.
+function game() {
+    for (let i = 0; i < 5; i++) {
+        let playerSelection = prompt("Make your choice: ").toLowerCase();
+        console.log(playRound(playerSelection, computerSelection));
+    }
+} 
+
+game();
